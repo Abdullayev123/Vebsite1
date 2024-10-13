@@ -1,0 +1,205 @@
+:root {
+  --dark-text-color: #495057;
+  --light-text-color: #e9ecef;
+  --background-color: #212529;
+}
+/* CONTAINER START  */
+.container {
+  max-width: 1500px;
+  padding: 0 48px;
+  margin: 0 auto;
+}
+/* CONTAINER END */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER START ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.header_Container {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 20px;
+}
+/* NAVBAR LOGO  START */
+.logo_and_Links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo > h1 {
+  font-size: clamp(1rem, 0.5431rem + 1.0345vw, 1.5rem);
+  font-weight: 400;
+  cursor: pointer;
+}
+/* NAVBAR LOGO END  */
+/* NAVBAR LINKS START  */
+.links {
+  display: flex;
+  gap: 20px;
+}
+.links > a {
+  color: var(--dark-text-color);
+}
+.links > a:hover {
+  color: #000;
+}
+/* NAVBAR LINKS END   */
+/* CART BUTTON START  */
+.header_card_Button {
+  color: var(--dark-text-color);
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+  padding-block: 10px;
+  border-radius: 5px;
+  gap: 10px;
+  border: 1px solid var(--background-color);
+  cursor: pointer;
+  transition: all 200ms linear;
+  position: relative;
+}
+.header_card_Button:hover {
+  color: var(--light-text-color);
+  background-color: var(--background-color);
+}
+
+.header_cart_button_Amount {
+  background-color: var(--dark-text-color);
+  width: 15px;
+  height: 15px;
+  color: var(--light-text-color) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
+  position: absolute;
+  top: 5px;
+  left: 30px;
+}
+/*  HAMBURGER BUYTTON START */
+
+.hamburger_Button {
+  display: none;
+  color: var(--dark-text-color);
+  align-items: center;
+  padding-inline: 20px;
+  padding-block: 10px;
+  border-radius: 5px;
+  gap: 10px;
+  border: 1px solid var(--dark-text-color);
+  cursor: pointer;
+  transition: all 200ms linear;
+  position: relative;
+}
+.hamburger_Button:hover {
+  color: var(--light-text-color);
+  background-color: var(--background-color);
+}
+/* HAMBURGER BUTTON END  */
+@media (max-width: 718px) {
+  .links {
+    display: none;
+  }
+  .hamburger_Button {
+    display: block;
+  }
+  .container {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 558px) {
+  .container {
+    padding-inline: 10px;
+  }
+  .header_card_Button {
+    display: none;
+  }
+}
+/* CART BUTTON END  */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER END ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+/* MAIN START  */
+
+/* HERO SECTION START  */
+.hero {
+  height: 40vh;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero_Text {
+  text-align: center;
+  width: fit-content;
+}
+.hero_text_bigText {
+  margin-bottom: 20px;
+  color: var(--light-text-color);
+  font-size: clamp(1.5rem, 0.7188rem + 2.5vw, 2.125rem);
+}
+.hero_text_subText {
+  color: #adb5bd;
+  font-size: clamp(0.875rem, 0.7371rem + 0.6897vw, 1.125rem);
+}
+
+/* HERO SECTION END  */
+/* PRODUCT START  */
+.products {
+  padding: 5vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  place-items: center;
+  gap: 40px;
+}
+.products_product_Box {
+  width: 100%;
+  height: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.product_box_image {
+  width: 100%;
+  height: 200px;
+  background-color: #dee2e6;
+}
+.product_box_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 30px;
+}
+.product_box_details_ProductName {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.product_box_details_productValue {
+  font-size: 14px;
+}
+.sale_box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  color: var(--light-text-color);
+  padding: 3px 10px;
+}
+@media (max-width: 600px) {
+  .products_product_Box {
+    height: 500px;
+  }
+  .product_box_image {
+    height: 250px;
+  }
+}
+
+/* PRODUCT END   */
+/* MAIN END  */
+footer {
+  padding-block: 50px;
+  background-color: var(--background-color);
+}
+.copywrite {
+  font-size: clamp(0.75rem, 0.4821rem + 0.8571vw, 1.125rem);
+  color: var(--light-text-color);
+  text-align: center;
+}
